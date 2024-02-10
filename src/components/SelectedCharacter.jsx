@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { GET_CHARACTER } from "../redux/actions";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import { Row, Col } from "react-bootstrap";
 
 export const SelectedCharacter = () => {
 	const dispatch = useDispatch();
@@ -23,20 +22,19 @@ export const SelectedCharacter = () => {
 	}, []);
 	return (
 		<>
-			<Row>
-				<Col xs={12} className="justify-content-center">
-					<Card style={{ width: "10rem" }}>
-						<Card.Img src={singleCharacter.thumbnail_url} />
-						<Card.Body>
-							<Card.Title>{singleCharacter.name}</Card.Title>
-							<Card.Text>
-								Some quick example text to build on the card title and make up the bulk of the card's content.
-							</Card.Text>
-							<Button variant="primary">Add to Favorite</Button>
-						</Card.Body>
-					</Card>
-				</Col>
-			</Row>
+			<Card style={{ width: "10rem" }}>
+				<Card.Img src={singleCharacter.thumbnail_url} />
+				<Card.Body>
+					<Card.Title>{singleCharacter.name}</Card.Title>
+					<Card.Text>
+						{singleCharacter.region && singleCharacter.region.toUpperCase()}-{singleCharacter.realm}
+					</Card.Text>
+					<Card.Text>
+						{singleCharacter.active_spec_name} {singleCharacter.class}
+					</Card.Text>
+					<Button variant="primary">Add to Favorite</Button>
+				</Card.Body>
+			</Card>
 		</>
 	);
 };

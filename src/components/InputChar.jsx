@@ -1,11 +1,11 @@
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
-export const InputChar = () => {
+const InputChar = () => {
 	return (
 		<>
-			<Form.Select aria-label="Default select example" required>
-				<option selected="selected" disabled="disabled" required>
+			<Form.Select defaultValue={"0"} required>
+				<option value="0" disabled>
 					Select Region
 				</option>
 				<option value="1">US</option>
@@ -16,8 +16,12 @@ export const InputChar = () => {
 			</Form.Select>
 			<Form.Control type="text" placeholder="Select Server" required />
 			<Form.Control type="text" placeholder="Select Character Name" required />
-			<Button variant="primary">Search</Button>
-			<Button variant="danger">Reset</Button>{" "}
+			<Button variant="primary" type="submit">
+				Search
+			</Button>
+			<Button variant="danger" type="button">
+				Reset
+			</Button>{" "}
 		</>
 	);
 };
