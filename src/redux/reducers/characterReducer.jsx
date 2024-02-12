@@ -1,8 +1,7 @@
-import { GET_CHARACTER, SET_QUERY } from "../actions";
+import { GET_CHARACTER } from "../actions";
 
 const initialState = {
 	searchChar: [],
-	query: "",
 };
 
 export const characterReducer = (state = initialState, action) => {
@@ -11,11 +10,6 @@ export const characterReducer = (state = initialState, action) => {
 			return {
 				...state,
 				searchChar: action.payload,
-			};
-		case SET_QUERY:
-			return {
-				...state,
-				query: action.payload,
 			};
 		default:
 			return state;
