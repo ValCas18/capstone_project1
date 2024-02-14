@@ -11,12 +11,14 @@ const InputChar = () => {
 
 	const dispatch = useDispatch();
 
-	const handleSearch = () => {
+	const handleSearch = (event) => {
+		event.preventDefault();
 		dispatch(setSearchCriteria(region, server, characterName));
 		console.log("User input:", { region, server, characterName });
 	};
+
 	return (
-		<>
+		<Form onSubmit={handleSearch}>
 			<Form.Select defaultValue={"0"} onChange={(e) => setRegion(e.target.value)} required>
 				<option value="0" disabled>
 					Select Region
@@ -34,13 +36,13 @@ const InputChar = () => {
 				onChange={(e) => setCharacterName(e.target.value)}
 				required
 			/>
-			<Button variant="primary" type="submit" onClick={handleSearch}>
+			<Button variant="primary" type="submit">
 				Search
 			</Button>
-			<Button variant="danger" type="button">
+			<Button variant="danger" type="reset">
 				Reset
-			</Button>{" "}
-		</>
+			</Button>
+		</Form>
 	);
 };
 

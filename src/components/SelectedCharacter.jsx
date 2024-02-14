@@ -1,41 +1,33 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { GET_CHARACTER } from "../redux/actions";
+import { getCharacterAsync } from "../redux/actions";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
-export const SelectedCharacter = () => {
+const SelectedCharacter = () => {
 	const dispatch = useDispatch();
-	const singleCharacter = useSelector((state) => state.character.searchChar);
+	const singleCharacter = useSelector((state) => state.character.singleChar);
+	const region = useSelector((state) => state.input.region);
+	const server = useSelector((state) => state.input.server);
+	const characterName = useSelector((state) => state.input.characterName);
+
 	useEffect(() => {
-		fetch("https://raider.io/api/v1/characters/profile?region=eu&realm=sylvanas&name=helanis")
-			.then((raw) => {
-				return raw.json();
-			})
-			.then((res) => {
-				console.log(res);
-				dispatch({
-					type: GET_CHARACTER,
-					payload: res,
-				});
-			});
-	}, []);
+		dispatch(getCharacterAsync());
+	}, [region, server, characterName]);
+
 	return (
-		<>
-			<Card style={{ width: "10rem" }}>
-				<Card.Img src={singleCharacter.thumbnail_url} />
-				<Card.Body>
-					<Card.Title>{singleCharacter.name}</Card.Title>
-					<Card.Text>
-						{singleCharacter.region && singleCharacter.region.toUpperCase()}-{singleCharacter.realm}
-					</Card.Text>
-					<Card.Text>
-						{singleCharacter.active_spec_name} {singleCharacter.class}
-					</Card.Text>
-					<Button variant="primary">Add to Favorite</Button>
-				</Card.Body>
-			</Card>
-		</>
+		<Card style={{ width: "10rem" }}>
+			<Card.Img src={singleCharacter.thumbnail_url} />
+			<Card.Body>
+				<Card.Title>{singleCharacter.name}</Card.Title>
+				<Card.Text>
+					{singleCharacter.active_spec_name} {singleCharacter.class}
+				</Card.Text>
+				<Button variant={singleCharacter.faction === "alliance" ? "primary" : "danger"}>Add to Favorite!</Button>{" "}
+				{/* potrei rendere il colore di ogni pulsante uguale a quello della classe */}
+			</Card.Body>
+		</Card>
 	);
 };
+
 export default SelectedCharacter;

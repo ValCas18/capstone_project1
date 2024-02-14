@@ -1,7 +1,7 @@
 import { GET_CHARACTER } from "../actions";
 
 const initialState = {
-	searchChar: [],
+	singleChar: [],
 };
 
 export const characterReducer = (state = initialState, action) => {
@@ -9,7 +9,7 @@ export const characterReducer = (state = initialState, action) => {
 		case GET_CHARACTER:
 			return {
 				...state,
-				searchChar: action.payload,
+				singleChar: action.payload,
 			};
 		default:
 			return state;
