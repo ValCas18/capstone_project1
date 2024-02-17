@@ -1,8 +1,10 @@
 .App {
 	text-align: center;
+	background-color: #4f4b49;
+}
+.backgroundDiv {
 	padding: 1rem;
 }
-
 .App-logo {
 	height: 40vmin;
 	pointer-events: none;

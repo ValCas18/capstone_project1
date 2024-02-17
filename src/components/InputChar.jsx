@@ -2,13 +2,12 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
-import { setSearchCriteria } from "../redux/actions";
+import { /* DELETE_CARD */ setSearchCriteria } from "../redux/actions";
 
 const InputChar = () => {
 	const [region, setRegion] = useState("");
 	const [server, setServer] = useState("");
 	const [characterName, setCharacterName] = useState("");
-
 	const dispatch = useDispatch();
 
 	const handleSearch = (event) => {
@@ -16,6 +15,13 @@ const InputChar = () => {
 		dispatch(setSearchCriteria(region, server, characterName));
 		console.log("User input:", { region, server, characterName });
 	};
+
+	/* 	const handleDeleteCard = (event) => {
+		event.preventDefault();
+		dispatch({
+			type: DELETE_CARD,
+		});
+	}; */
 
 	return (
 		<Form onSubmit={handleSearch}>
@@ -39,7 +45,7 @@ const InputChar = () => {
 			<Button variant="primary" type="submit">
 				Search
 			</Button>
-			<Button variant="danger" type="reset">
+			<Button variant="danger" type="reset" /* onClick={handleDeleteCard} */>
 				Reset
 			</Button>
 		</Form>
