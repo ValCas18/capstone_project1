@@ -1,10 +1,16 @@
 export const GET_CHARACTER = "GET_CHARACTER";
 export const SET_SEARCH_CRITERIA = "SET_SEARCH_CRITERIA";
+export const GET_USER = "GET_USER";
 export const DELETE_CARD = "DELETE_CARD";
 
 export const setSearchCriteria = (region, server, characterName) => ({
 	type: SET_SEARCH_CRITERIA,
 	payload: { region, server, characterName },
+});
+
+export const getUser = (userName, password) => ({
+	type: GET_USER,
+	payload: { userName, password },
 });
 
 export const getCharacterAsync = () => {

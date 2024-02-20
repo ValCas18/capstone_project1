@@ -1,15 +1,16 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { getUser } from "../redux/actions";
 
 const Login = () => {
-	const [formData, setFormData] = useState({
-		userName: "",
-		password: "",
-	});
+	const [userName, setUserName] = useState("");
+	const [password, setPassword] = useState("");
 	const [error, setError] = useState({});
 	const [valid, setValid] = useState(true);
 	const navigate = useNavigate();
+	const dispatch = useDispatch();
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
@@ -20,10 +21,11 @@ const Login = () => {
 			.get("http://localhost:8000/users")
 			.then((result) => {
 				result.data.map((user) => {
-					if (user.userName === formData.userName) {
-						if (user.password === formData.password) {
+					if (user.userName === userName) {
+						if (user.password === password) {
 							alert("Login Successful!");
 							navigate("/");
+							dispatch(getUser(userName, password));
 						} else {
 							isValid = false;
 							validationError.password = "Wrong Password.";
@@ -63,7 +65,7 @@ const Login = () => {
 										name="fname"
 										className="form-control"
 										placeholder="Enter User Name"
-										onChange={(event) => setFormData({ ...formData, userName: event.target.value })}
+										onChange={(event) => setUserName(event.target.value)}
 										required
 									/>
 								</div>
@@ -77,12 +79,12 @@ const Login = () => {
 										name="password"
 										className="form-control"
 										placeholder="Enter Password"
-										onChange={(event) => setFormData({ ...formData, password: event.target.value })}
+										onChange={(event) => setPassword(event.target.value)}
 										required
 									/>
 								</div>
 								<div>
-									<button className="btn btn-primary float-center mb-3">Login</button>
+									<button className="btn btn-success float-center mb-3">Login</button>
 								</div>
 							</div>
 							<p className="text-center text-secondary">

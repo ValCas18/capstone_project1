@@ -1,4 +1,4 @@
-/* const initialState = {
+const initialState = {
 	cardExists: false,
 };
 
@@ -14,4 +14,4 @@ const reducer = (state = initialState, action) => {
 	}
 };
 
-export default reducer; */
+export default reducer;
