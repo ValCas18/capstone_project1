@@ -1,7 +1,7 @@
 export const GET_CHARACTER = "GET_CHARACTER";
 export const SET_SEARCH_CRITERIA = "SET_SEARCH_CRITERIA";
 export const GET_USER = "GET_USER";
-export const DELETE_CARD = "DELETE_CARD";
+export const CARD_EXISTS = "CARD_EXISTS";
 
 export const setSearchCriteria = (region, server, characterName) => ({
 	type: SET_SEARCH_CRITERIA,

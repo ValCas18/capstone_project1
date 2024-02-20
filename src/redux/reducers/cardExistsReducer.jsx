@@ -1,12 +1,12 @@
-import { DELETE_CARD } from "../actions";
+import { CARD_EXISTS } from "../actions";
 
 const initialState = {
 	cardExists: true,
 };
 
-export const deleteCard = (state = initialState, action) => {
+export const cardExistsReducer = (state = initialState, action) => {
 	switch (action.type) {
-		case DELETE_CARD:
+		case CARD_EXISTS:
 			return {
 				...state,
 				cardExists: false,

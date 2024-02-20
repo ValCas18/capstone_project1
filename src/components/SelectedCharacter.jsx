@@ -10,7 +10,7 @@ const SelectedCharacter = () => {
 	const region = useSelector((state) => state.input.region);
 	const server = useSelector((state) => state.input.server);
 	const characterName = useSelector((state) => state.input.characterName);
-	const cardExists = useSelector((state) => state.deleteCard.cardExists);
+	const cardExists = useSelector((state) => state.cardExists.cardExists);
 
 	useEffect(() => {
 		dispatch(getCharacterAsync());
