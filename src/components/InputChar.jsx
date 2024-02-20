@@ -16,13 +16,6 @@ const InputChar = () => {
 		console.log("User input:", { region, server, characterName });
 	};
 
-	/* 	const handleDeleteCard = (event) => {
-		event.preventDefault();
-		dispatch({
-			type: DELETE_CARD,
-		});
-	}; */
-
 	return (
 		<Form onSubmit={handleSearch}>
 			<Form.Select defaultValue={"0"} onChange={(e) => setRegion(e.target.value)} required>

@@ -56,16 +56,6 @@ export const Registration = () => {
 				});
 		}
 	};
-	/* axios.post('https://api.example.com/data', {
-  key1: 'value1',
-  key2: 'value2'
-})
-.then(response => {
-  console.log('Response:', response.data);
-})
-.catch(error => {
-  console.error('Error:', error);
-}); */
 
 	return (
 		<div className="container">
