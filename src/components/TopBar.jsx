@@ -9,7 +9,7 @@ export const TopBar = () => {
 	const userName = userData.userName.toString();
 
 	return (
-		<Navbar expand="sm" style={{ backgroundColor: "#262321" }}>
+		<Navbar expand="sm" style={{ backgroundColor: "#262321" }} className="p-3 mb-3">
 			<Container>
 				<Link to="/" className="text-light">
 					Awesome WoW Character Finder
@@ -18,9 +18,12 @@ export const TopBar = () => {
 				<Navbar.Collapse className="justify-content-end">
 					<div className="d-flex gap-3 align-items-center">
 						{userName ? (
-							<div className="d-flex align-items-center">
-								<span className="text-light me-2">For Azeroth, {userName.toUpperCase()}!</span>{" "}
-								<Button className="bg-transparent border-info">Logout</Button>
+							<div className="d-flex align-items-center gap-2">
+								<span className="text-light">For Azeroth, {userName.toUpperCase()}!</span>{" "}
+								<Link to="/profile">
+									<Button className="bg-transparent border-info">Profile</Button>
+								</Link>
+								<Button className="bg-transparent border-light">Logout</Button>
 							</div>
 						) : (
 							<>

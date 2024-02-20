@@ -7,6 +7,7 @@ import { TopBar } from "./components/TopBar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Registration from "./components/Registration";
 import Login from "./components/Login";
+import Profile from "./components/Profile";
 
 function App() {
 	const region = useSelector((state) => state.input.region);
@@ -22,6 +23,7 @@ function App() {
 						<Route path="/" element={<InputChar />}></Route>
 						<Route path="/registration" element={<Registration />}></Route>
 						<Route path="/login" element={<Login />}></Route>
+						<Route path="/profile" element={<Profile />}></Route>
 					</Routes>
 					{region && server && characterName ? <SelectedCharacter /> : ""}
 				</BrowserRouter>

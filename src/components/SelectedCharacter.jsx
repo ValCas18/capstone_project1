@@ -19,7 +19,7 @@ const SelectedCharacter = () => {
 	return (
 		<>
 			<div className="d-flex justify-content-center">
-				{cardExists === true ? (
+				{cardExists ? (
 					<Card style={{ width: "10rem" }}>
 						<Card.Img src={singleCharacter.thumbnail_url} />
 						<Card.Body>
