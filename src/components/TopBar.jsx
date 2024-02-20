@@ -11,20 +11,13 @@ export const TopBar = () => {
 					Awesome WoW Character Searcher
 				</Link>
 				<Navbar.Toggle />
-				<Navbar.Collapse className="justify-content-end">
-					<Link to="/registration" className="">
-						Sign Up
+				<Navbar.Collapse className="justify-content-end gap-3">
+					<Link to="/registration">
+						<Button className="text-warning">Sign Up</Button>
 					</Link>
-					{/* <Button variant="success" className="me-3">
-						Login
-					</Button>
-					<Button variant="light">Sign-Up</Button>{" "}
-					<Navbar.Text className="text-light">
-						Signed in as:{" "}
-						<span href="#login" className="text-light">
-							Mark Otto
-						</span>
-					</Navbar.Text> */}
+					<Link to="/login">
+						<Button className="bg-danger text-dark">Login</Button>
+					</Link>
 				</Navbar.Collapse>
 			</Container>
 		</Navbar>

@@ -18,22 +18,28 @@ const SelectedCharacter = () => {
 
 	return (
 		<>
-			{cardExists === true ? (
-				<Card style={{ width: "10rem" }}>
-					<Card.Img src={singleCharacter.thumbnail_url} />
-					<Card.Body>
-						<Card.Title>{singleCharacter.name}</Card.Title>
-						<Card.Text>
-							{singleCharacter.active_spec_name} {singleCharacter.class}
-						</Card.Text>
-						<Button variant={singleCharacter.faction === "alliance" ? "primary" : "danger"}>Add to Favorite!</Button>{" "}
-						{/* potrei rendere il colore di ogni pulsante uguale a quello della classe */}
-						{/* style={{ backgroundColor: "orange" }}  */}
-					</Card.Body>
-				</Card>
-			) : (
-				""
-			)}
+			<div className="d-flex justify-content-center">
+				{cardExists === true ? (
+					<Card style={{ width: "10rem" }}>
+						<Card.Img src={singleCharacter.thumbnail_url} />
+						<Card.Body>
+							<Card.Title>{singleCharacter.name}</Card.Title>
+							<Card.Text>
+								{singleCharacter.active_spec_name} {singleCharacter.class}
+							</Card.Text>
+							<Button
+								className={singleCharacter.faction === "alliance" ? "bg-primary text-warning" : "bg-danger text-dark"}
+							>
+								Add to Favorite!
+							</Button>{" "}
+							{/* potrei rendere il colore di ogni pulsante uguale a quello della classe con uno switch?*/}
+							{/* style={{ backgroundColor: "orange" }}  */}
+						</Card.Body>
+					</Card>
+				) : (
+					""
+				)}
+			</div>
 		</>
 	);
 };

@@ -2,7 +2,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
-import { /* DELETE_CARD */ setSearchCriteria } from "../redux/actions";
+import { setSearchCriteria } from "../redux/actions";
 
 const InputChar = () => {
 	const [region, setRegion] = useState("");
@@ -17,7 +17,7 @@ const InputChar = () => {
 	};
 
 	return (
-		<Form onSubmit={handleSearch}>
+		<Form onSubmit={handleSearch} className="mb-3">
 			<Form.Select defaultValue={"0"} onChange={(e) => setRegion(e.target.value)} required>
 				<option value="0" disabled>
 					Select Region
@@ -35,12 +35,14 @@ const InputChar = () => {
 				onChange={(e) => setCharacterName(e.target.value)}
 				required
 			/>
-			<Button variant="primary" type="submit">
-				Search
-			</Button>
-			<Button variant="danger" type="reset" /* onClick={handleDeleteCard} */>
-				Reset
-			</Button>
+			<div className="d-flex justify-content-center gap-3 mt-3">
+				<Button className="text-warning" type="submit">
+					Search
+				</Button>
+				<Button className="bg-danger text-dark" type="reset">
+					Reset
+				</Button>
+			</div>
 		</Form>
 	);
 };
