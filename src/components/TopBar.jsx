@@ -28,10 +28,10 @@ export const TopBar = () => {
 						) : (
 							<>
 								<Link to="/registration">
-									<Button className="text-warning">Sign Up</Button>
+									<Button className="text-warning border border-dark">Sign Up</Button>
 								</Link>
 								<Link to="/login">
-									<Button className="bg-danger text-dark">Login</Button>
+									<Button className="bg-danger text-dark border border-dark">Login</Button>
 								</Link>
 							</>
 						)}

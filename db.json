@@ -1,11 +1,12 @@
 {
-  "users": [
-    {
-      "id": "7897",
-      "userName": "tizio",
-      "email": "caio@caio.it",
-      "password": "12345678",
-      "confPassword": "12345678"
-    }
-  ]
+	"users": [
+		{
+			"id": "7897",
+			"userName": "tizio",
+			"email": "caio@caio.it",
+			"password": "12345678",
+			"confPassword": "12345678",
+			"favourites": {}
+		}
+	]
 }

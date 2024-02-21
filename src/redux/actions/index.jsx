@@ -2,6 +2,8 @@ export const GET_CHARACTER = "GET_CHARACTER";
 export const SET_SEARCH_CRITERIA = "SET_SEARCH_CRITERIA";
 export const GET_USER = "GET_USER";
 export const CARD_EXISTS = "CARD_EXISTS";
+export const ADD_FAV = "ADD_FAV";
+export const REMOVE_FAV = "REMOVE_FAV";
 
 export const setSearchCriteria = (region, server, characterName) => ({
 	type: SET_SEARCH_CRITERIA,
@@ -34,3 +36,8 @@ export const getCharacterAsync = () => {
 	};
 };
 export default getCharacterAsync;
+
+export const addToFavourites = (character) => ({
+	type: ADD_FAV,
+	payload: character,
+});

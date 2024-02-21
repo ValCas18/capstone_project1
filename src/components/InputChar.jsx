@@ -36,10 +36,10 @@ const InputChar = () => {
 				required
 			/>
 			<div className="d-flex justify-content-center gap-3 mt-3">
-				<Button className="text-warning" type="submit">
+				<Button className="text-warning border border-dark" type="submit">
 					Search
 				</Button>
-				<Button className="bg-danger text-dark" type="reset">
+				<Button className="bg-danger text-dark border border-dark" type="reset">
 					Reset
 				</Button>
 			</div>
