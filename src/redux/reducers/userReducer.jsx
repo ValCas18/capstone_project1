@@ -4,6 +4,7 @@ const initialState = {
 	userName: "",
 	password: "",
 	userId: null,
+	favourites: [],
 };
 
 export const userReducer = (state = initialState, action) => {

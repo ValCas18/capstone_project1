@@ -7,16 +7,19 @@ import axios from "axios";
 
 const SelectedCharacter = () => {
 	const singleCharacter = useSelector((state) => state.character.singleChar);
-	const userData = useSelector((state) => state.user);
+	const userData = useSelector((state) => state.userData);
 	const cardExists = useSelector((state) => state.cardExists.cardExists);
 	const dispatch = useDispatch();
 	const [isAddedToFavorites, setIsAddedToFavorites] = useState(false);
 
 	const addToFavouritesHandler = async () => {
 		try {
-			const response = await axios.put(`http://localhost:8000/users/${userData.userId}`, {
+			const updatedUser = {
+				...userData,
 				favourites: [...userData.favourites, singleCharacter],
-			});
+			};
+
+			const response = await axios.put(`http://localhost:8000/users/${userData.userId}`, { users: [updatedUser] });
 			console.log("PUT request successful:", response.data);
 			setIsAddedToFavorites(true);
 		} catch (error) {
@@ -26,7 +29,7 @@ const SelectedCharacter = () => {
 
 	useEffect(() => {
 		dispatch(getCharacterAsync());
-	}, []);
+	}, [userData.userId, singleCharacter.id]);
 
 	return (
 		<>

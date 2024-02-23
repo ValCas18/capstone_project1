@@ -7,6 +7,7 @@ import Registration from "./components/Registration";
 import Login from "./components/Login";
 import Profile from "./components/Profile";
 import Home from "./components/Home";
+import Footer from "./components/Footer";
 
 function App() {
 	const userData = useSelector((state) => state.userData);
@@ -21,6 +22,7 @@ function App() {
 						<Route path="/login" element={<Login />}></Route>
 						<Route path={`/users/${userData.userId}`} element={<Profile />}></Route>
 					</Routes>
+					<Footer />
 				</BrowserRouter>
 			</div>
 		</div>

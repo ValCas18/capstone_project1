@@ -16,7 +16,7 @@ export const TopBar = () => {
 				<Navbar.Toggle />
 				<Navbar.Collapse className="justify-content-end">
 					<div className="d-flex gap-3 align-items-center">
-						{userData ? (
+						{userData.userName ? (
 							<div className="d-flex align-items-center gap-2">
 								<span className="text-light">For Azeroth, {userData.userName.toUpperCase()}!</span>{" "}
 								<Link to={`/users/${userData.userId}`}>
