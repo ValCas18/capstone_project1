@@ -8,7 +8,7 @@ const Profile = () => {
 	return (
 		<div>
 			<h2 className="text-light">Favourite Characters</h2>
-			{favChars ? (
+			{favChars.lenght > 0 ? (
 				<Card style={{ width: "10rem" }}>
 					<Card.Img src={favChars.thumbnail_url} />
 					<Card.Body>
@@ -27,7 +27,7 @@ const Profile = () => {
 					</Card.Body>
 				</Card>
 			) : (
-				""
+				<h4 className="text-light">No characters selected.</h4>
 			)}
 		</div>
 	);

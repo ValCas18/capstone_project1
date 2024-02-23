@@ -9,7 +9,7 @@ import Profile from "./components/Profile";
 import Home from "./components/Home";
 
 function App() {
-	const userName = useSelector((state) => state.userData.userName);
+	const userData = useSelector((state) => state.userData);
 	return (
 		<div className="App">
 			<div className="backgroundDiv">
@@ -19,7 +19,7 @@ function App() {
 						<Route path="/" element={<Home />}></Route>
 						<Route path="/registration" element={<Registration />}></Route>
 						<Route path="/login" element={<Login />}></Route>
-						<Route path={`/profile/${userName}`} element={<Profile />}></Route>
+						<Route path={`/users/${userData.userId}`} element={<Profile />}></Route>
 					</Routes>
 				</BrowserRouter>
 			</div>

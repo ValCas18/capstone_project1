@@ -1,23 +1,32 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addToFavourites, getCharacterAsync } from "../redux/actions";
+import { getCharacterAsync } from "../redux/actions";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+import axios from "axios";
 
 const SelectedCharacter = () => {
 	const singleCharacter = useSelector((state) => state.character.singleChar);
-	const region = useSelector((state) => state.input.region);
-	const server = useSelector((state) => state.input.server);
-	const characterName = useSelector((state) => state.input.characterName);
+	const userData = useSelector((state) => state.user);
 	const cardExists = useSelector((state) => state.cardExists.cardExists);
 	const dispatch = useDispatch();
+	const [isAddedToFavorites, setIsAddedToFavorites] = useState(false);
 
-	const addToFavouritesHandler = () => {
-		dispatch(addToFavourites(singleCharacter));
+	const addToFavouritesHandler = async () => {
+		try {
+			const response = await axios.put(`http://localhost:8000/users/${userData.userId}`, {
+				favourites: [...userData.favourites, singleCharacter],
+			});
+			console.log("PUT request successful:", response.data);
+			setIsAddedToFavorites(true);
+		} catch (error) {
+			console.error("Error making PUT request:", error);
+		}
 	};
+
 	useEffect(() => {
 		dispatch(getCharacterAsync());
-	}, [region, server, characterName]);
+	}, []);
 
 	return (
 		<>
@@ -30,14 +39,9 @@ const SelectedCharacter = () => {
 							<Card.Text>
 								{singleCharacter.active_spec_name} {singleCharacter.class}
 							</Card.Text>
-							<Button
-								onClick={addToFavouritesHandler}
-								className={singleCharacter.faction === "alliance" ? "bg-primary text-warning" : "bg-danger text-dark"}
-							>
-								Add to Favourite!
-							</Button>{" "}
-							{/* potrei rendere il colore di ogni pulsante uguale a quello della classe con uno switch?*/}
-							{/* style={{ backgroundColor: "orange" }}  */}
+							<Button onClick={addToFavouritesHandler} disabled={isAddedToFavorites}>
+								{isAddedToFavorites ? "Added to Favorites" : "Add to Favorites"}
+							</Button>
 						</Card.Body>
 					</Card>
 				) : (

@@ -10,9 +10,9 @@ export const setSearchCriteria = (region, server, characterName) => ({
 	payload: { region, server, characterName },
 });
 
-export const getUser = (userName, password) => ({
+export const getUser = (userData) => ({
 	type: GET_USER,
-	payload: { userName, password },
+	payload: userData,
 });
 
 export const getCharacterAsync = () => {

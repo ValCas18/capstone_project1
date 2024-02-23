@@ -1,12 +1,18 @@
 {
-	"users": [
-		{
-			"id": "7897",
-			"userName": "tizio",
-			"email": "caio@caio.it",
-			"password": "12345678",
-			"confPassword": "12345678",
-			"favourites": {}
-		}
-	]
+  "users": [
+    {
+      "id": "7897",
+      "userName": "tizio",
+      "email": "caio@caio.it",
+      "password": "12345678",
+      "confPassword": "12345678"
+    },
+    {
+      "id": "9465",
+      "userName": "caio",
+      "email": "persona@gmail.com",
+      "password": "87654321",
+      "confPassword": "87654321"
+    }
+  ]
 }

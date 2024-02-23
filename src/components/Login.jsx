@@ -25,7 +25,7 @@ const Login = () => {
 						if (user.password === password) {
 							alert("Login Successful!");
 							navigate("/");
-							dispatch(getUser(userName, password));
+							dispatch(getUser({ userId: user.id, userName: user.userName, password: user.password }));
 						} else {
 							isValid = false;
 							validationError.password = "Wrong Password.";

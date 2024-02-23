@@ -1,7 +1,7 @@
 import { GET_CHARACTER } from "../actions";
 
 const initialState = {
-	singleChar: [],
+	singleChar: {},
 };
 
 export const characterReducer = (state = initialState, action) => {
