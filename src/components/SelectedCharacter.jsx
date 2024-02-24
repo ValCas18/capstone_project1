@@ -10,18 +10,15 @@ const SelectedCharacter = () => {
 	const userData = useSelector((state) => state.userData);
 	const cardExists = useSelector((state) => state.cardExists.cardExists);
 	const dispatch = useDispatch();
-	const [isAddedToFavorites, setIsAddedToFavorites] = useState(false);
+	const [isAddedTofav, setIsAddedTofav] = useState(false);
 
-	const addToFavouritesHandler = async () => {
+	const addTofavHandler = async () => {
 		try {
-			const updatedUser = {
-				...userData,
-				favourites: [...userData.favourites, singleCharacter],
-			};
-
-			const response = await axios.put(`http://localhost:8000/users/${userData.userId}`, { users: [updatedUser] });
+			const response = await axios.put(`http://localhost:8000/users/${userData.userId}`, {
+				fav: [...userData.fav, singleCharacter],
+			});
 			console.log("PUT request successful:", response.data);
-			setIsAddedToFavorites(true);
+			setIsAddedTofav(true);
 		} catch (error) {
 			console.error("Error making PUT request:", error);
 		}
@@ -29,7 +26,7 @@ const SelectedCharacter = () => {
 
 	useEffect(() => {
 		dispatch(getCharacterAsync());
-	}, [userData.userId, singleCharacter.id]);
+	}, []);
 
 	return (
 		<>
@@ -42,8 +39,8 @@ const SelectedCharacter = () => {
 							<Card.Text>
 								{singleCharacter.active_spec_name} {singleCharacter.class}
 							</Card.Text>
-							<Button onClick={addToFavouritesHandler} disabled={isAddedToFavorites}>
-								{isAddedToFavorites ? "Added to Favorites" : "Add to Favorites"}
+							<Button onClick={addTofavHandler} disabled={isAddedTofav}>
+								{isAddedTofav ? "Added to Favourites!" : "Add to Favourites"}
 							</Button>
 						</Card.Body>
 					</Card>

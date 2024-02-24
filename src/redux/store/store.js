@@ -10,7 +10,7 @@ const rootReducer = combineReducers({
 	input: inputReducer,
 	userData: userReducer,
 	cardExists: cardExistsReducer,
-	isFavourite: favouriteReducer,
+	isFav: favouriteReducer,
 });
 
 const store = configureStore({

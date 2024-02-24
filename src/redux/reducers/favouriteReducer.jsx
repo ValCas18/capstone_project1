@@ -1,7 +1,7 @@
 import { ADD_FAV, REMOVE_FAV } from "../actions";
 
 const initialState = {
-	favourites: [],
+	fav: [],
 };
 
 export const favouriteReducer = (state = initialState, action) => {
@@ -9,7 +9,7 @@ export const favouriteReducer = (state = initialState, action) => {
 		case ADD_FAV:
 			return {
 				...state,
-				favourites: [...state.favourites, action.payload],
+				fav: action.payload,
 			};
 		case REMOVE_FAV:
 			return {};

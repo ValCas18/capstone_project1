@@ -37,7 +37,7 @@ export const getCharacterAsync = () => {
 };
 export default getCharacterAsync;
 
-export const addToFavourites = (character) => ({
+export const addToFav = (character) => ({
 	type: ADD_FAV,
 	payload: character,
 });

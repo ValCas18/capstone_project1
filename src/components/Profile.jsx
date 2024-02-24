@@ -3,7 +3,7 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 
 const Profile = () => {
-	const favChars = useSelector((state) => state.isFavourite.favourites);
+	const favChars = useSelector((state) => state.isFav.fav);
 
 	return (
 		<div>
