@@ -8,7 +8,7 @@ export const TopBar = () => {
 	const userData = useSelector((state) => state.userData);
 
 	return (
-		<Navbar expand="sm" style={{ backgroundColor: "#262321" }} className="p-3 mb-3">
+		<Navbar expand="sm" style={{ backgroundColor: "#262321" }} className="p-3 mb-3 sticky-top">
 			<Container>
 				<Link to="/" className="text-light">
 					Awesome WoW Character Finder
