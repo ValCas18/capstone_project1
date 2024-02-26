@@ -1,9 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Anta&family=Kanit:wght@400;700&display=swap");
+
+.kanit-regular {
+	font-family: "Kanit", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.kanit-bold {
+	font-family: "Kanit", sans-serif;
+	font-weight: 700;
+	font-style: normal;
+}
+
 .App {
+	font-family: "Kanit", sans-serif;
 	text-align: center;
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
-	/* 	background-color: #4f4b49; */
 }
 
 .App-logo {

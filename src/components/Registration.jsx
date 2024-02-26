@@ -60,7 +60,7 @@ export const Registration = () => {
 
 	return (
 		<div
-			className="pb-5 d-flex justify-content-center align-items-center"
+			className="d-flex justify-content-center align-items-center pb-5 px-5 "
 			style={{
 				backgroundImage: `url('https://i.imgur.com/jhoP8OT.jpeg')`,
 				backgroundSize: "cover",

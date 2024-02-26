@@ -6,7 +6,15 @@ const Profile = () => {
 	const favChars = useSelector((state) => state.userData.fav);
 
 	return (
-		<div>
+		<div
+			className="px-5 d-flex justify-content-center align-items-center"
+			style={{
+				backgroundImage: `url('https://i.imgur.com/4iddo3O.jpeg')`,
+				backgroundSize: "cover",
+				backgroundPosition: "center",
+				minHeight: "100vh",
+			}}
+		>
 			<h2 className="text-light">Favourite Characters</h2>
 			{favChars.length > 0 ? (
 				favChars.map((char, index) => (

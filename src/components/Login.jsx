@@ -40,7 +40,7 @@ const Login = () => {
 
 	return (
 		<div
-			className="pb-5 d-flex justify-content-center align-items-center"
+			className="px-5 d-flex justify-content-center align-items-center"
 			style={{
 				backgroundImage: `url('https://i.imgur.com/yaBmveW.jpeg')`,
 				backgroundSize: "cover",
@@ -53,7 +53,7 @@ const Login = () => {
 					<div className="signup-form">
 						<form
 							onSubmit={handleSubmit}
-							className="p-4"
+							className="p-4 "
 							style={{
 								backgroundColor: "rgba(255, 255, 255, 0.3)",
 							}}
@@ -75,7 +75,7 @@ const Login = () => {
 									/>
 								</div>
 								{/* PSW */}
-								<div className="mb-2">
+								<div className="mb-4">
 									<label className="">
 										Password<span className="text-danger">*</span>
 									</label>
@@ -92,7 +92,7 @@ const Login = () => {
 									<button className="btn btn-success float-center mb-3">Login</button>
 								</div>
 							</div>
-							<p className="text-center text-secondary">
+							<p className="text-center text-dark">
 								If you do not have an account, please <Link to="/registration">Sign Up</Link>.
 							</p>
 						</form>
