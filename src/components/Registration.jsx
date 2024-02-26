@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import bg1 from "../assets/img/bg1.avif";
 
 export const Registration = () => {
 	const [formData, setFormData] = useState({
@@ -34,12 +35,12 @@ export const Registration = () => {
 		setValid(isValid);
 
 		if (Object.keys(validationError).length === 0) {
-			fetch("http://localhost:8000/users", {
+			fetch("http://localhost:8000/signup", {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",
 				},
-				body: JSON.stringify(formData),
+				body: JSON.stringify({ ...formData, fav: [] }),
 			})
 				.then((response) => {
 					if (!response.ok) {
@@ -58,12 +59,26 @@ export const Registration = () => {
 	};
 
 	return (
-		<div className="container">
+		<div
+			className="pb-5 d-flex justify-content-center align-items-center"
+			style={{
+				backgroundImage: `url('https://i.imgur.com/jhoP8OT.jpeg')`,
+				backgroundSize: "cover",
+				backgroundPosition: "center",
+				minHeight: "100vh",
+			}}
+		>
 			<div className="row">
-				<div className="col-md-6 offset-md-3">
+				<div className="col-xs-12">
 					<div className="signup-form">
-						<form className="mt-5 border p-4 bg-light shadow" onSubmit={handleSubmit}>
-							<h4 className="mb-3 text-secondary">Create Your Account</h4>
+						<form
+							onSubmit={handleSubmit}
+							className="mt-5 p-4"
+							style={{
+								backgroundColor: "rgba(255, 255, 255, 0.3)",
+							}}
+						>
+							<h4 className="mb-3 text-dark">Create Your Account</h4>
 							{valid ? (
 								<></>
 							) : (
@@ -73,7 +88,7 @@ export const Registration = () => {
 									{error.confPassword} <br></br>
 								</span>
 							)}
-							<div className="row">
+							<div>
 								{/* USER NAME */}
 								<div className="mb-2">
 									<label>
@@ -131,7 +146,7 @@ export const Registration = () => {
 									/>
 								</div>
 								<div>
-									<button className="btn btn-primary float-center mb-3">Signup Now</button>
+									<button className="btn btn-primary float-center mb-3">Sign Up Now</button>
 								</div>
 							</div>
 							<p className="text-center text-secondary">

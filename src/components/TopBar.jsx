@@ -8,7 +8,7 @@ export const TopBar = () => {
 	const userData = useSelector((state) => state.userData);
 
 	return (
-		<Navbar expand="sm" style={{ backgroundColor: "#262321" }} className="p-3 mb-3 sticky-top">
+		<Navbar expand="sm" style={{ backgroundColor: "#262321" }} className="p-3 sticky-top">
 			<Container>
 				<Link to="/" className="text-light">
 					Awesome WoW Character Finder
@@ -19,7 +19,7 @@ export const TopBar = () => {
 						{userData.userName ? (
 							<div className="d-flex align-items-center gap-2">
 								<span className="text-light">For Azeroth, {userData.userName.toUpperCase()}!</span>{" "}
-								<Link to={`/users/${userData.userId}`}>
+								<Link to={`/users/${userData.id}`}>
 									<Button className="bg-transparent border-info">Profile</Button>
 								</Link>
 								<Button className="bg-transparent border-light">Logout</Button>

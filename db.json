@@ -1,31 +1,71 @@
 {
   "users": [
     {
-      "updatedUser": {
-        "userName": "tizio",
-        "password": "12345678",
-        "userId": "9465",
-        "fav": [
-          {
-            "name": "Helanis",
-            "race": "Human",
-            "class": "Paladin",
-            "active_spec_name": "Retribution",
-            "active_spec_role": "DPS",
-            "gender": "female",
-            "faction": "alliance",
-            "achievement_points": 24985,
-            "honorable_kills": 0,
-            "thumbnail_url": "https://render.worldofwarcraft.com/eu/character/sylvanas/178/257456562-avatar.jpg?alt=/wow/static/images/2d/avatar/1-1.jpg",
-            "region": "eu",
-            "realm": "Sylvanas",
-            "last_crawled_at": "2024-02-19T01:25:09.000Z",
-            "profile_url": "https://raider.io/characters/eu/sylvanas/Helanis",
-            "profile_banner": "alliancebanner1"
-          }
-        ]
-      },
-      "id": "9465"
+      "userName": "tizio",
+      "password": "12345678",
+      "id": "4820",
+      "fav": [
+        {
+          "name": "Helanis",
+          "race": "Human",
+          "class": "Paladin",
+          "active_spec_name": "Retribution",
+          "active_spec_role": "DPS",
+          "gender": "female",
+          "faction": "alliance",
+          "achievement_points": 24985,
+          "honorable_kills": 0,
+          "thumbnail_url": "https://render.worldofwarcraft.com/eu/character/sylvanas/178/257456562-avatar.jpg?alt=/wow/static/images/2d/avatar/1-1.jpg",
+          "region": "eu",
+          "realm": "Sylvanas",
+          "last_crawled_at": "2024-02-19T01:25:09.000Z",
+          "profile_url": "https://raider.io/characters/eu/sylvanas/Helanis",
+          "profile_banner": "alliancebanner1"
+        }
+      ]
+    },
+    {
+      "email": "caio@gmail.com",
+      "password": "$2a$10$64uIzhz81jKcg5jLFUnCbuUJpsmmEmhx9U4GdAfmjJJ6CLYf2D/M2",
+      "userName": "caio",
+      "confPassword": "87654321",
+      "id": "u8w7vj-",
+      "fav": [
+        {
+          "name": "Helanis",
+          "race": "Human",
+          "class": "Paladin",
+          "active_spec_name": "Retribution",
+          "active_spec_role": "DPS",
+          "gender": "female",
+          "faction": "alliance",
+          "achievement_points": 24985,
+          "honorable_kills": 0,
+          "thumbnail_url": "https://render.worldofwarcraft.com/eu/character/sylvanas/178/257456562-avatar.jpg?alt=/wow/static/images/2d/avatar/1-1.jpg",
+          "region": "eu",
+          "realm": "Sylvanas",
+          "last_crawled_at": "2024-02-19T01:25:09.000Z",
+          "profile_url": "https://raider.io/characters/eu/sylvanas/Helanis",
+          "profile_banner": "alliancebanner1"
+        },
+        {
+          "name": "Varethios",
+          "race": "Blood Elf",
+          "class": "Death Knight",
+          "active_spec_name": "Unholy",
+          "active_spec_role": "DPS",
+          "gender": "male",
+          "faction": "horde",
+          "achievement_points": 23680,
+          "honorable_kills": 0,
+          "thumbnail_url": "https://render.worldofwarcraft.com/eu/character/nemesis/11/77888011-avatar.jpg?alt=/wow/static/images/2d/avatar/10-0.jpg",
+          "region": "eu",
+          "realm": "Nemesis",
+          "last_crawled_at": "2023-12-20T18:18:54.000Z",
+          "profile_url": "https://raider.io/characters/eu/nemesis/Varethios",
+          "profile_banner": "hordebanner1"
+        }
+      ]
     }
   ]
 }

@@ -1,5 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+/* import { Col, Container, Row } from "react-bootstrap"; */
 import { TopBar } from "./components/TopBar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -13,18 +14,16 @@ function App() {
 	const userData = useSelector((state) => state.userData);
 	return (
 		<div className="App">
-			<div className="backgroundDiv">
-				<BrowserRouter>
-					<TopBar />
-					<Routes>
-						<Route path="/" element={<Home />}></Route>
-						<Route path="/registration" element={<Registration />}></Route>
-						<Route path="/login" element={<Login />}></Route>
-						<Route path={`/users/${userData.userId}`} element={<Profile />}></Route>
-					</Routes>
-					<Footer />
-				</BrowserRouter>
-			</div>
+			<BrowserRouter>
+				<TopBar />
+				<Routes>
+					<Route path="/" element={<Home />}></Route>
+					<Route path="/registration" element={<Registration />}></Route>
+					<Route path="/login" element={<Login />}></Route>
+					<Route path={`/users/${userData.id}`} element={<Profile />}></Route>
+				</Routes>
+				<Footer />
+			</BrowserRouter>
 		</div>
 	);
 }

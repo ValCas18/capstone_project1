@@ -5,55 +5,60 @@ import { useDispatch } from "react-redux";
 import { getUser } from "../redux/actions";
 
 const Login = () => {
-	const [userName, setUserName] = useState("");
+	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
-	const [error, setError] = useState({});
-	const [valid, setValid] = useState(true);
 	const navigate = useNavigate();
 	const dispatch = useDispatch();
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		let isValid = true;
-		let validationError = {};
 
 		axios
-			.get("http://localhost:8000/users")
+			.post("http://localhost:8000/login", { email, password })
 			.then((result) => {
-				result.data.map((user) => {
-					if (user.userName === userName) {
+				console.log(result);
+				alert("Login Successful!");
+				navigate("/");
+				dispatch(getUser(result.data.user));
+				localStorage.setItem("token", result.data);
+				/* result.data.map((user) => {
+					if (user.email === email) {
 						if (user.password === password) {
 							alert("Login Successful!");
 							navigate("/");
-							dispatch(getUser({ userId: user.id, userName: user.userName, password: user.password }));
+							dispatch(getUser(user));
 						} else {
-							isValid = false;
-							validationError.password = "Wrong Password.";
+							alert("Your user ID or password is incorrect.");
 						}
+					} else {
+						alert("Your user ID or password is incorrect.");
 					}
-				});
-				setError(validationError);
-				setValid(isValid);
+				}); */
 			})
 			.catch((err) => console.log(err));
 	};
 
 	return (
-		<div className="container">
+		<div
+			className="pb-5 d-flex justify-content-center align-items-center"
+			style={{
+				backgroundImage: `url('https://i.imgur.com/yaBmveW.jpeg')`,
+				backgroundSize: "cover",
+				backgroundPosition: "center",
+				minHeight: "100vh",
+			}}
+		>
 			<div className="row">
-				<div className="col-md-6 offset-md-3">
+				<div className="col-xs-12">
 					<div className="signup-form">
-						<form className="mt-5 border p-4 bg-light shadow" onSubmit={handleSubmit}>
-							<h4 className="mb-3 text-secondary">Enter Your Credentials</h4>
-							{valid ? (
-								<></>
-							) : (
-								<span className="text-danger">
-									{error.email} <br></br>
-									{error.password} <br></br>
-									{error.confPassword} <br></br>
-								</span>
-							)}
+						<form
+							onSubmit={handleSubmit}
+							className="p-4"
+							style={{
+								backgroundColor: "rgba(255, 255, 255, 0.3)",
+							}}
+						>
+							<h4 className="mb-3 ">Enter Your Credentials</h4>
 							<div className="row">
 								{/* USER NAME */}
 								<div className="mb-2">
@@ -64,14 +69,14 @@ const Login = () => {
 										type="text"
 										name="fname"
 										className="form-control"
-										placeholder="Enter User Name"
-										onChange={(event) => setUserName(event.target.value)}
+										placeholder="Enter Email"
+										onChange={(event) => setEmail(event.target.value)}
 										required
 									/>
 								</div>
 								{/* PSW */}
 								<div className="mb-2">
-									<label>
+									<label className="">
 										Password<span className="text-danger">*</span>
 									</label>
 									<input

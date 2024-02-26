@@ -1,7 +1,7 @@
 import { CARD_EXISTS } from "../actions";
 
 const initialState = {
-	cardExists: true,
+	cardStatus: true,
 };
 
 export const cardExistsReducer = (state = initialState, action) => {
