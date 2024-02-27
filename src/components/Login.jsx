@@ -60,10 +60,9 @@ const Login = () => {
 						>
 							<h4 className="mb-3 ">Enter Your Credentials</h4>
 							<div className="row">
-								{/* USER NAME */}
 								<div className="mb-2">
 									<label>
-										User Name<span className="text-danger">*</span>
+										Email<span className="text-danger">*</span>
 									</label>
 									<input
 										type="text"
@@ -74,7 +73,6 @@ const Login = () => {
 										required
 									/>
 								</div>
-								{/* PSW */}
 								<div className="mb-4">
 									<label className="">
 										Password<span className="text-danger">*</span>
