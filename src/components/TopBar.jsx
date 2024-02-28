@@ -8,10 +8,10 @@ export const TopBar = () => {
 	const userData = useSelector((state) => state.userData);
 
 	return (
-		<Navbar expand="sm" style={{ backgroundColor: "#262321" }} className="p-3 sticky-top">
+		<Navbar expand="sm" className="p-3 sticky-top bg-dark">
 			<Container>
-				<Link to="/" className="text-light">
-					Awesome WoW Character Finder
+				<Link to="/" className="text-light fs-5 kode-mono-font text-decoration-none border border-light p-2">
+					WoW Armory 2.0
 				</Link>
 				<Navbar.Toggle />
 				<Navbar.Collapse className="justify-content-end">
@@ -27,10 +27,10 @@ export const TopBar = () => {
 						) : (
 							<>
 								<Link to="/registration">
-									<Button className="text-warning border border-dark">Sign Up</Button>
+									<Button className="text-warning border border-warning rounded-0">Sign Up</Button>
 								</Link>
 								<Link to="/login">
-									<Button className="bg-danger text-dark border border-dark">Login</Button>
+									<Button className="bg-danger text-dark border border-dark rounded-0">Login</Button>
 								</Link>
 							</>
 						)}

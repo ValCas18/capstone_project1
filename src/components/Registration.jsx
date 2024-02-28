@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import bg1 from "../assets/img/bg1.avif";
 
 export const Registration = () => {
 	const [formData, setFormData] = useState({
@@ -146,10 +145,10 @@ export const Registration = () => {
 									/>
 								</div>
 								<div>
-									<button className="btn btn-primary float-center mb-3">Sign Up Now</button>
+									<button className="btn btn-success float-center rounded-0 mb-3">Sign Up Now</button>
 								</div>
 							</div>
-							<p className="text-center text-secondary">
+							<p className="text-center text-dark">
 								If you already have account, please <Link to="/login">Login Now</Link>.
 							</p>
 						</form>

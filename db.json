@@ -64,6 +64,40 @@
           "last_crawled_at": "2023-12-20T18:18:54.000Z",
           "profile_url": "https://raider.io/characters/eu/nemesis/Varethios",
           "profile_banner": "hordebanner1"
+        },
+        {
+          "name": "Vathrael",
+          "race": "Blood Elf",
+          "class": "Demon Hunter",
+          "active_spec_name": "Havoc",
+          "active_spec_role": "DPS",
+          "gender": "male",
+          "faction": "horde",
+          "achievement_points": 24930,
+          "honorable_kills": 0,
+          "thumbnail_url": "https://render.worldofwarcraft.com/eu/character/nemesis/102/142155110-avatar.jpg?alt=/wow/static/images/2d/avatar/10-0.jpg",
+          "region": "eu",
+          "realm": "Nemesis",
+          "last_crawled_at": "2024-01-04T04:07:21.000Z",
+          "profile_url": "https://raider.io/characters/eu/nemesis/Vathrael",
+          "profile_banner": "hordebanner1"
+        },
+        {
+          "name": "Fydhras",
+          "race": "Night Elf",
+          "class": "Druid",
+          "active_spec_name": "Feral",
+          "active_spec_role": "DPS",
+          "gender": "male",
+          "faction": "alliance",
+          "achievement_points": 19455,
+          "honorable_kills": 0,
+          "thumbnail_url": "https://render.worldofwarcraft.com/eu/character/sylvanas/155/257544859-avatar.jpg?alt=/wow/static/images/2d/avatar/4-0.jpg",
+          "region": "eu",
+          "realm": "Sylvanas",
+          "last_crawled_at": "2023-09-13T17:59:14.000Z",
+          "profile_url": "https://raider.io/characters/eu/sylvanas/Fydhras",
+          "profile_banner": "alliancebanner1"
         }
       ]
     }

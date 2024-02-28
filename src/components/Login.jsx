@@ -87,7 +87,7 @@ const Login = () => {
 									/>
 								</div>
 								<div>
-									<button className="btn btn-success float-center mb-3">Login</button>
+									<button className="btn btn-success rounded-0 float-center mb-3">Login</button>
 								</div>
 							</div>
 							<p className="text-center text-dark">
