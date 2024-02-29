@@ -41,7 +41,9 @@ const SelectedCharacter = () => {
 				{singleCharacter.name ? (
 					<Card
 						style={{ width: "10rem" }}
-						className={singleCharacter.faction === "alliance" ? "border-primary border-5" : "border-danger border-5"}
+						className={
+							singleCharacter.faction === "alliance" ? "border-primary border-5 mb-5" : "border-danger border-5 mb-5"
+						}
 					>
 						<Card.Img src={singleCharacter.thumbnail_url} />
 						<Card.Body>

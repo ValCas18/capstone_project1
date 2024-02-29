@@ -25,7 +25,7 @@ const Profile = () => {
 							md={5}
 							lg={3}
 							className="py-2"
-							style={{ background: "rgba(255, 255, 255, 0.4)", border: "3px solid black" }}
+							style={{ background: "rgba(255, 255, 255, 0.7)", border: "3px solid black" }}
 						>
 							<Row>
 								<Col xs={4} className="d-flex flex-column space-between">
@@ -49,7 +49,7 @@ const Profile = () => {
 								<Row className="justify-content-center">
 									<Col xs={12} md={8}>
 										<a
-											/* class="btn btn-primary w-100 d-block" */ className={
+											className={
 												char.faction === "alliance"
 													? "btn btn-primary text-warning border-warning w-100 d-block rounded-0"
 													: "btn btn-danger text-dark border-dark w-100 d-block rounded-0"
