@@ -9,12 +9,12 @@ const Home = () => {
 	const characterName = useSelector((state) => state.input.characterName);
 	return (
 		<div
-			style={{
+		/* style={{
 				backgroundImage: `url('https://i.imgur.com/83JAb6U.jpeg')`,
 				backgroundSize: "cover",
 				backgroundPosition: "center",
 				minHeight: "100vh",
-			}}
+			}} */
 		>
 			<InputChar />
 			{region && server && characterName ? <SelectedCharacter /> : ""}

@@ -62,6 +62,9 @@
 	margin-top: auto;
 }
 
-.bg1 {
-	background-image: "https://i.imgur.com/9yourMm.jpeg";
+.try {
+	background-image: url("https://i.imgur.com/83JAb6U.jpeg");
+	background-size: cover;
+	background-position: center;
+	min-height: 100vh;
 }
