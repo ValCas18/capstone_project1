@@ -145,7 +145,7 @@ export const Registration = () => {
 									/>
 								</div>
 								<div>
-									<button className="btn btn-success float-center rounded-0 mb-3">Sign Up Now</button>
+									<button className="btn btn-success float-center rounded-0 mb-3">Sign Up</button>
 								</div>
 							</div>
 							<p className="text-center text-dark">

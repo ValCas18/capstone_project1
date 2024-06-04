@@ -9,7 +9,7 @@ export const Footer = () => {
 					<Col className="border border-light kode-mono-font p-1">
 						<h4>My Contacts</h4>
 						<span className="fs-5">LinkedIn: </span>
-						<span>https://www.linkedin.com/in/valerio-casadei-8730071b8/</span> <br></br>
+						<span>https://www.linkedin.com/in/valerio-casadei-frontenddeveloper/</span> <br></br>
 						<span className="fs-5">GitHub: </span>
 						<span>https://github.com/ValCas18</span>
 					</Col>

@@ -1,81 +1,30 @@
 {
-	"users": [
-		{
-			"email": "caio@gmail.com",
-			"password": "$2a$10$64uIzhz81jKcg5jLFUnCbuUJpsmmEmhx9U4GdAfmjJJ6CLYf2D/M2",
-			"userName": "caio",
-			"confPassword": "87654321",
-			"id": "u8w7vj-",
-			"fav": [
-				{
-					"name": "Helanis",
-					"race": "Human",
-					"class": "Paladin",
-					"active_spec_name": "Retribution",
-					"active_spec_role": "DPS",
-					"gender": "female",
-					"faction": "alliance",
-					"achievement_points": 24985,
-					"honorable_kills": 0,
-					"thumbnail_url": "https://render.worldofwarcraft.com/eu/character/sylvanas/178/257456562-avatar.jpg?alt=/wow/static/images/2d/avatar/1-1.jpg",
-					"region": "eu",
-					"realm": "Sylvanas",
-					"last_crawled_at": "2024-02-19T01:25:09.000Z",
-					"profile_url": "https://raider.io/characters/eu/sylvanas/Helanis",
-					"profile_banner": "alliancebanner1"
-				},
-				{
-					"name": "Varethios",
-					"race": "Blood Elf",
-					"class": "Death Knight",
-					"active_spec_name": "Unholy",
-					"active_spec_role": "DPS",
-					"gender": "male",
-					"faction": "horde",
-					"achievement_points": 23680,
-					"honorable_kills": 0,
-					"thumbnail_url": "https://render.worldofwarcraft.com/eu/character/nemesis/11/77888011-avatar.jpg?alt=/wow/static/images/2d/avatar/10-0.jpg",
-					"region": "eu",
-					"realm": "Nemesis",
-					"last_crawled_at": "2023-12-20T18:18:54.000Z",
-					"profile_url": "https://raider.io/characters/eu/nemesis/Varethios",
-					"profile_banner": "hordebanner1"
-				},
-				{
-					"name": "Vathrael",
-					"race": "Blood Elf",
-					"class": "Demon Hunter",
-					"active_spec_name": "Havoc",
-					"active_spec_role": "DPS",
-					"gender": "male",
-					"faction": "horde",
-					"achievement_points": 24930,
-					"honorable_kills": 0,
-					"thumbnail_url": "https://render.worldofwarcraft.com/eu/character/nemesis/102/142155110-avatar.jpg?alt=/wow/static/images/2d/avatar/10-0.jpg",
-					"region": "eu",
-					"realm": "Nemesis",
-					"last_crawled_at": "2024-01-04T04:07:21.000Z",
-					"profile_url": "https://raider.io/characters/eu/nemesis/Vathrael",
-					"profile_banner": "hordebanner1"
-				},
-				{
-					"name": "Fydhras",
-					"race": "Night Elf",
-					"class": "Druid",
-					"active_spec_name": "Feral",
-					"active_spec_role": "DPS",
-					"gender": "male",
-					"faction": "alliance",
-					"achievement_points": 19455,
-					"honorable_kills": 0,
-					"thumbnail_url": "https://render.worldofwarcraft.com/eu/character/sylvanas/155/257544859-avatar.jpg?alt=/wow/static/images/2d/avatar/4-0.jpg",
-					"region": "eu",
-					"realm": "Sylvanas",
-					"last_crawled_at": "2023-09-13T17:59:14.000Z",
-					"profile_url": "https://raider.io/characters/eu/sylvanas/Fydhras",
-					"profile_banner": "alliancebanner1"
-				}
-			]
-		}
-	]
+  "users": [
+    {
+      "email": "valcas@gmail.com",
+      "password": "$2a$10$qOOxI4Go6YOquvWIf9Gc.etGcTBYjESxC74gX7OmRDEm2XCVsppsG",
+      "userName": "ValCas",
+      "confPassword": "12345678",
+      "fav": [
+        {
+          "name": "Helanis",
+          "race": "Human",
+          "class": "Paladin",
+          "active_spec_name": "Retribution",
+          "active_spec_role": "DPS",
+          "gender": "female",
+          "faction": "alliance",
+          "achievement_points": 24985,
+          "honorable_kills": 0,
+          "thumbnail_url": "https://render.worldofwarcraft.com/eu/character/sylvanas/178/257456562-avatar.jpg?alt=/wow/static/images/2d/avatar/1-1.jpg",
+          "region": "eu",
+          "realm": "Sylvanas",
+          "last_crawled_at": "2024-02-19T01:25:09.000Z",
+          "profile_url": "https://raider.io/characters/eu/sylvanas/Helanis",
+          "profile_banner": "alliancebanner1"
+        }
+      ],
+      "id": 1
+    }
+  ]
 }

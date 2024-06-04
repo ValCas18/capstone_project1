@@ -56,6 +56,7 @@ const Profile = () => {
 											}
 											href={char.profile_url}
 											role="button"
+											target="blank"
 										>
 											Raider.IO
 										</a>
