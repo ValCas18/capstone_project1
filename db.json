@@ -2,26 +2,43 @@
   "users": [
     {
       "email": "valcas@gmail.com",
-      "password": "$2a$10$qOOxI4Go6YOquvWIf9Gc.etGcTBYjESxC74gX7OmRDEm2XCVsppsG",
+      "password": "$2a$10$FB7BXMxrmAme4CK.5PNkAu2cn6Lbrw/WgjuAG8IP/k6t92fg45lyW",
       "userName": "ValCas",
       "confPassword": "12345678",
       "fav": [
         {
-          "name": "Helanis",
-          "race": "Human",
-          "class": "Paladin",
-          "active_spec_name": "Retribution",
+          "name": "Hjolurn",
+          "race": "Dwarf",
+          "class": "Mage",
+          "active_spec_name": "Frost",
           "active_spec_role": "DPS",
-          "gender": "female",
+          "gender": "male",
           "faction": "alliance",
-          "achievement_points": 24985,
+          "achievement_points": 26330,
           "honorable_kills": 0,
-          "thumbnail_url": "https://render.worldofwarcraft.com/eu/character/sylvanas/178/257456562-avatar.jpg?alt=/wow/static/images/2d/avatar/1-1.jpg",
+          "thumbnail_url": "https://render.worldofwarcraft.com/eu/character/sylvanas/132/260596868-avatar.jpg?alt=/wow/static/images/2d/avatar/3-0.jpg",
           "region": "eu",
           "realm": "Sylvanas",
-          "last_crawled_at": "2024-02-19T01:25:09.000Z",
-          "profile_url": "https://raider.io/characters/eu/sylvanas/Helanis",
+          "last_crawled_at": "2024-05-23T23:17:27.000Z",
+          "profile_url": "https://raider.io/characters/eu/sylvanas/Hjolurn",
           "profile_banner": "alliancebanner1"
+        },
+        {
+          "name": "Varethios",
+          "race": "Blood Elf",
+          "class": "Death Knight",
+          "active_spec_name": "Unholy",
+          "active_spec_role": "DPS",
+          "gender": "male",
+          "faction": "horde",
+          "achievement_points": 23680,
+          "honorable_kills": 0,
+          "thumbnail_url": "https://render.worldofwarcraft.com/eu/character/nemesis/11/77888011-avatar.jpg?alt=/wow/static/images/2d/avatar/10-0.jpg",
+          "region": "eu",
+          "realm": "Nemesis",
+          "last_crawled_at": "2023-12-20T18:18:54.000Z",
+          "profile_url": "https://raider.io/characters/eu/nemesis/Varethios",
+          "profile_banner": "hordebanner1"
         }
       ],
       "id": 1

@@ -31,6 +31,9 @@ const SelectedCharacter = () => {
 		}
 	};
 
+	{
+		/* FETCH */
+	}
 	useEffect(() => {
 		dispatch(getCharacterAsync());
 	}, [userInput.region, userInput.server, userInput.characterName]);
